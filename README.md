@@ -4,4 +4,4 @@
 # PAGE END:
 ![FrontEnd-2](https://www.upload.ee/image/13990064/venueFetchPhotosDemoPic3.jpg)
 
-TODO: Loading page while fetching data.
+TODO: Show a loading page while fetching data.
