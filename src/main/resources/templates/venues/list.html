@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Burger Venues</title>
+    <link href="stylesheet.css" rel="stylesheet">
+</head>
+<body>
+<div class="main">
+<h1>Venues</h1>
+    <table>
+        <tr th:each="venue : ${venues}">
+            <th th:text="${venue.venue}"></th>
+            <!--<th th:text="${venue.id}"></th>
+            <th th:text="${!venue.burgers.isEmpty()} ? 'X - NO PHOTO' : 'PHOTO FOUND!'"></th>-->
+        </tr>
+    </table>
+    <hr>
+    <h2> White Photos - Burger not Found - src(unknown). </h2>
+    <h2> Some places are currently outdated - visit with caution. </h2>
+    <hr>
+    <div class="burgerPhotos">
+        <h3 th:each="venue : ${venues}">
+            <p th:text="${venue.venue}"></p>
+            <img th:src="${!venue.burgers.isEmpty()} ? ${venue.burgers.get(0).getImg()}" alt="" width="400" height="400"/>
+        </h3>
+    </div>
+</div>
+</body>
+</html>
